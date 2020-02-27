@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Bellman</string>
+    <string name="you_are_in">You are in</string>
+    <string name="misr_al_gadida_egypt">Misr Al Gadida - Egypt</string>
+    <string name="hotspots">Hotspots</string>
+    <string name="view_all">View all</string>
+    <string name="event">Event</string>
+    <string name="attractions">Attractions</string>
+    <string name="cafes">Cafes</string>
+    <string name="notfound">NULL</string>
+    <string name="kellie_mcguire">Kellie Mcguire</string>
+</resources>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/bigHeader"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/big_header"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/youAreIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/you_are_in"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/icons8_calendar_24"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_notifications_black_24dp"
+            app:layout_constraintRight_toLeftOf="@id/calendar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/locationWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:src="@drawable/location_white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/youAreIn" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/misr_al_gadida_egypt"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/locationWhite"
+            app:layout_constraintTop_toBottomOf="@id/youAreIn" />
+
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/rounded_editetext"
+            android:drawableStart="@drawable/location_search_icon"
+            android:drawableEnd="@drawable/filter_inside_search"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/location" />
+
+        <ImageView
+            android:id="@+id/hotspotIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/hotspot_icon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bigHeader" />
+
+        <TextView
+            android:id="@+id/hotspotText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textStyle="bold"
+            android:text="@string/hotspots"
+            app:layout_constraintLeft_toRightOf="@id/hotspotIcon"
+            app:layout_constraintTop_toBottomOf="@id/bigHeader" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:drawableEnd="@drawable/view_all_icon"
+            android:drawablePadding="8dp"
+            android:text="@string/view_all"
+            android:textColor="@color/viewAll"
+            android:textSize="12sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bigHeader" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hotspotsRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hotspotIcon" />
+
+        <ImageView
+            android:id="@+id/eventIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/events_icon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hotspotsRecycler" />
+
+        <TextView
+            android:id="@+id/eventText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="50dp"
+            android:textStyle="bold"
+            android:text="@string/event"
+            app:layout_constraintLeft_toRightOf="@id/eventIcon"
+            app:layout_constraintTop_toBottomOf="@id/hotspotsRecycler" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="8dp"
+            android:drawableEnd="@drawable/view_all_icon"
+            android:drawablePadding="8dp"
+            android:text="@string/view_all"
+            android:textColor="@color/viewAll"
+            android:textSize="12sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hotspotsRecycler" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/eventRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eventIcon" />
+
+        <ImageView
+            android:id="@+id/attractionsIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/attarctions_icon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eventRecycler" />
+
+        <TextView
+            android:id="@+id/attractionsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="50dp"
+            android:textStyle="bold"
+            android:text="@string/attractions"
+            app:layout_constraintLeft_toRightOf="@id/attractionsIcon"
+            app:layout_constraintTop_toBottomOf="@id/eventRecycler" />
+
+
+        <TextView
+            android:id="@+id/viewAllAttractions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="8dp"
+            android:drawableEnd="@drawable/view_all_icon"
+            android:drawablePadding="8dp"
+            android:text="@string/view_all"
+            android:textColor="@color/viewAll"
+            android:textSize="12sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eventRecycler" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/attractionsRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/attractionsIcon" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

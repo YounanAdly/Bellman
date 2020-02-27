@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <array name="drawable_array">
+        <item>@drawable/selector_location</item>
+        <item>@drawable/selector_attarctions</item>
+        <item>@drawable/selector_events</item>
+        <item>@drawable/selector_hotspot</item>
+    </array>
+</resources>
