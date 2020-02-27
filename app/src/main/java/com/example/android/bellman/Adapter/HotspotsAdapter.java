@@ -1,7 +1,6 @@
 package com.example.android.bellman.Adapter;
 
 import android.content.Context;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +30,7 @@ public class HotspotsAdapter extends RecyclerView.Adapter<HotspotsAdapter.MyView
     @Override
     public HotspotsAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.hotspots_list, parent, false);
+        View view = inflater.inflate(R.layout.list_layout, parent, false);
         return new MyViewHolder(view);
     }
 

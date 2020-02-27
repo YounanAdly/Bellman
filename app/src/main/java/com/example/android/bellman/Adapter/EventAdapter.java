@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.android.bellman.Model.Attraction;
 import com.example.android.bellman.Model.Event;
 import com.example.android.bellman.R;
 import com.squareup.picasso.Picasso;
@@ -31,7 +30,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
     @Override
     public EventAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.hotspots_list, parent, false);
+        View view = inflater.inflate(R.layout.list_layout, parent, false);
         return new MyViewHolder(view);
     }
 

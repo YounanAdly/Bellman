@@ -30,7 +30,7 @@ public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.My
     @Override
     public AttractionAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.hotspots_list, parent, false);
+        View view = inflater.inflate(R.layout.list_layout, parent, false);
         return new MyViewHolder(view);
     }
 
